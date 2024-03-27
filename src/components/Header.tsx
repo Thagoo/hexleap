@@ -6,7 +6,7 @@ export default function Header() {
   const { darkTheme, toggleTheme } = useTheme();
 
   return (
-    <div>
+    <div className="text-center">
       <button onClick={toggleTheme}>
         {darkTheme ? "Light Mode" : "Dark Mode"}
       </button>

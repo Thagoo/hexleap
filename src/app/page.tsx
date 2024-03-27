@@ -1,15 +1,16 @@
-import GridColumn from "@/components/GridColumn";
+import BottomBanner from "@/components/BottomBanner";
 import Header from "@/components/Header";
+import TopBanner from "@/components/TopBanner";
 
 export default function Home() {
   return (
     <main className="bg-light dark:bg-dark">
-      <Header />
-      <div className="min-h-screen px-20 py-12  ">
-        <h1 className="text-slate-900 dark:text-white text-xl font-bold mb-6">
-          Sports
-        </h1>
-        <GridColumn />
+      <div className=" md:flex-col space-y-4 px-4 md:px-20 py-12">
+        <Header />
+
+        <TopBanner />
+
+        <BottomBanner />
       </div>
     </main>
   );
