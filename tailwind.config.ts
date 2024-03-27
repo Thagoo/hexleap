@@ -6,13 +6,13 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: "class",
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
+      backgroundImage: (theme) => ({
+        light: "linear-gradient(180deg, #F8FAFC 0%, #E5E7EB 100%)",
+        dark: "linear-gradient(180deg, #18282A 0%, #221A2C 100%)",
+      }),
     },
   },
   plugins: [],
