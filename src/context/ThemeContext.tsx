@@ -14,7 +14,7 @@ type ThemeContextType = {
 };
 
 const ThemeContext = createContext<ThemeContextType>({
-  darkTheme: null,
+  darkTheme: false,
   toggleTheme: () => {},
 });
 
@@ -25,19 +25,27 @@ export const ThemeProvider = ({
 }: {
   children: ReactNode;
 }): ReactElement => {
-  const [darkTheme, setDarkTheme] = useState<boolean | null>(null);
+  const [darkTheme, setDarkTheme] = useState<boolean | null>(false);
 
   const toggleTheme = (): void => {
     setDarkTheme(!darkTheme);
   };
 
   useEffect(() => {
-    document!
-      .querySelector("html")!
-      .classList.replace(
-        darkTheme ? "dark" : "light",
-        darkTheme ? "light" : "dark"
-      );
+    const dark = localStorage.getItem("darkTheme");
+    if (dark == "true") {
+      setDarkTheme(true);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (darkTheme) {
+      document!.querySelector("html")!.classList.add("dark");
+      localStorage.setItem("darkTheme", "true");
+    } else {
+      document!.querySelector("html")!.classList.remove("dark");
+      localStorage.setItem("darkTheme", "false");
+    }
   }, [darkTheme]);
 
   return (

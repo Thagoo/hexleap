@@ -44,7 +44,7 @@ export default function TicketColumn() {
               quality={100}
             />
             <div className="border-b-2 border-dashed border-gray-500 mx-2 my-3"></div>
-            <div className="py-2 grid gap-2">
+            <div className="py-2 px-2 grid gap-2">
               <h1 className=" text-slate-900 dark:text-white font-semibold text-lg">
                 {item.title}
               </h1>
