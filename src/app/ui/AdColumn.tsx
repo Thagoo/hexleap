@@ -9,7 +9,7 @@ export default function AdColumn() {
           key={i}
           className="h-auto bg-white dark:bg-[#3b3e47] drop-shadow-md p-2 "
         >
-          <div className="min-h-[100%] ad-column relative border-[1px] border-gray-300 dark:border-none">
+          <div className="min-h-[100%] relative border-[1px] border-gray-300 dark:border-none">
             <span className="absolute top-0 right-0 bg-black text-white text-xs font-bold px-2 py-1 ">
               AD
             </span>
