@@ -4,9 +4,13 @@
 
 To develop a given figma desgin with dark mode support.
 
+## Design
+
+https://www.figma.com/file/ILhqTNgZ8z0y8NjV8QtlYv/Hexleap-Frontend-Assignment?type=design&node-id=0:1&mode=design&t=nEoAYu5bFl3KSVlX-1
+
 ## Live Demo
 
-https://hexleap-assignment-host.vercel.app/
+https://hexleap-assignment-lohith.vercel.app/
 
 You can view a live demo of the project [Please note this site is hosted in free on render so it takes 20 sec for initial load]
 
