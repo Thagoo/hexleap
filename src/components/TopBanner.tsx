@@ -13,7 +13,7 @@ export default function TopBanner() {
         <h1 className="text-slate-900 dark:text-white text-2xl font-bold mb-6 border-b-2 border-sky-600 w-fit">
           Sports
         </h1>
-        <div className="space-y-4 md:flex md:space-x-8 ">
+        <div className="space-y-4 md:space-y-0 md:grid md:grid-cols-5 md:gap-4 ">
           {sportsData
             .slice(0, showMore ? sportsData.length : 4)
             .map((item, i) => (
